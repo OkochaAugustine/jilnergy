@@ -21,12 +21,7 @@ function HoverMenu({ label, items }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box
-      onMouseEnter={onOpen}
-      onMouseLeave={onClose}
-      position="relative"
-    >
-      {/* Menu Button */}
+    <Box onMouseEnter={onOpen} onMouseLeave={onClose} position="relative">
       <Button
         variant="ghost"
         rightIcon={<FiChevronDown />}
@@ -37,7 +32,6 @@ function HoverMenu({ label, items }) {
         {label}
       </Button>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <Box
           position="absolute"
@@ -80,7 +74,13 @@ function MobileDropdown({ label, items }) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box w="full" rounded="xl" overflow="hidden" border="1px solid" borderColor="whiteAlpha.200">
+    <Box
+      w="full"
+      rounded="xl"
+      overflow="hidden"
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+    >
       <Flex
         justify="space-between"
         align="center"
@@ -101,13 +101,7 @@ function MobileDropdown({ label, items }) {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <VStack
-          align="start"
-          spacing={4}
-          px={5}
-          py={5}
-          bg="blackAlpha.700"
-        >
+        <VStack align="start" spacing={4} px={5} py={5} bg="blackAlpha.700">
           {items.map((item) => (
             <Link
               key={item.label}
@@ -145,7 +139,6 @@ export default function Navbar() {
       bgPosition="center"
     >
       <Box bg="blackAlpha.800" backdropFilter="blur(8px)">
-        {/* TOP BAR */}
         <Flex
           maxW="1400px"
           mx="auto"
@@ -154,8 +147,14 @@ export default function Navbar() {
           align="center"
           justify="space-between"
         >
+          {/* LOGO - INCREASED SIZE */}
           <Link href="/">
-            <Image src="/images/logo.jpg" alt="Jilnergy Solar" h={10} />
+            <Image
+              src="/images/logo.jpg"
+              alt="Jilnergy Solar"
+              h={{ base: 14, md: 20 }} // Larger height for desktop
+              w="auto"
+            />
           </Link>
 
           {/* DESKTOP MENU */}
@@ -175,8 +174,8 @@ export default function Navbar() {
                 { label: "Residential Solar", href: "/solutions/residential" },
                 { label: "Commercial Solar", href: "/solutions/commercial" },
                 { label: "Industrial Solar", href: "/solutions/industrial" },
-                { label: "Hybrid / Off-Grid", href: "/solutions/hybrid" },
-                { label: "Solar Water Pumps", href: "/solutions/water-pumps" },
+                
+                
               ]}
             />
 
@@ -210,7 +209,6 @@ export default function Navbar() {
               Contact
             </Link>
 
-            {/* ✅ Updated "Get a Free Quote" to link to contact page */}
             <Link href="/contact">
               <Button
                 bg="yellow.400"
@@ -237,13 +235,7 @@ export default function Navbar() {
 
         {/* MOBILE PANEL */}
         <Collapse in={isOpen} animateOpacity>
-          <Box
-            display={{ md: "none" }}
-            px={6}
-            py={8}
-            bg="blackAlpha.900"
-            backdropFilter="blur(14px)"
-          >
+          <Box display={{ md: "none" }} px={6} py={8} bg="blackAlpha.900" backdropFilter="blur(14px)">
             <VStack spacing={5} align="stretch">
               <Link
                 href="/"
@@ -297,7 +289,6 @@ export default function Navbar() {
                 Contact
               </Link>
 
-              {/* ✅ Mobile "Get a Free Quote" */}
               <Link href="/contact">
                 <Button
                   size="lg"

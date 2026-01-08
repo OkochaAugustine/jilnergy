@@ -114,12 +114,12 @@ export default function Footer() {
 
             <HStack>
               <Icon as={FaPhoneAlt} />
-              <Text fontSize="sm">+234 XXX XXX XXXX</Text>
+              <Text fontSize="sm">+2347010402027</Text>
             </HStack>
 
             <HStack>
               <Icon as={FaEnvelope} />
-              <Text fontSize="sm">okochaaugustine158@gmail.com</Text>
+              <Text fontSize="sm">Jilnergyservice1@yahoo.com</Text>
             </HStack>
           </VStack>
         </Grid>

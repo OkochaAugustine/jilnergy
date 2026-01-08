@@ -85,8 +85,8 @@ export default function ResidentialPage() {
           <SimpleGrid maxW="1200px" mx="auto" columns={{ base: 1, md: 3 }} spacing={8}>
             {[
               {
-                title: "1.5kVA – 2kVA System",
-                power: "Lights, TV, fan, decoder, phone charging",
+                title: "1.5kVA – 30kVA System",
+                power: "Lights, TV Set, fan, AC, Sumo, Water Heater",
                 duration: "6–10 hours daily",
                 cost: "₦1.8M – ₦2.5M",
               },

@@ -11,14 +11,17 @@ export default function HeroSection() {
       position="relative"
       w="100%"
       minH="100vh"
-      bg="#0b1d1a"
       overflow="hidden"
+      bgImage="url('/images/nav-bg2.jpg')" // MAIN HERO BACKGROUND
+      bgSize="cover"
+      bgPosition="center"
     >
-      {/* BACKGROUND AMBIENCE */}
+      {/* BACKGROUND OVERLAY / AMBIENCE */}
       <Box
         position="absolute"
         inset={0}
-        bgGradient="linear(to-b, #081513, #0b1d1a)"
+        bgGradient="linear(to-b, rgba(0,0,0,0.6), rgba(0,0,0,0.5))" // dark overlay to make text readable
+        zIndex={1}
       />
 
       {/* MAIN CONTENT */}
@@ -35,24 +38,12 @@ export default function HeroSection() {
         gap={12}
       >
         {/* LEFT TEXT */}
-        <VStack
-          align="start"
-          spacing={6}
-          maxW="520px"
-        >
-          <Text
-            color="yellow.400"
-            fontWeight="bold"
-            letterSpacing="wider"
-          >
+        <VStack align="start" spacing={6} maxW="520px">
+          <Text color="yellow.400" fontWeight="bold" letterSpacing="wider">
             SOLAR ENERGY SOLUTIONS
           </Text>
 
-          <Heading
-            fontSize={{ base: "4xl", md: "6xl" }}
-            lineHeight="1.1"
-            color="white"
-          >
+          <Heading fontSize={{ base: "4xl", md: "6xl" }} lineHeight="1.1" color="white">
             Power Your Future  
             <Text as="span" color="yellow.400"> With The Sun</Text>
           </Heading>
@@ -68,7 +59,7 @@ export default function HeroSection() {
               color="black"
               _hover={{ bg: "yellow.300" }}
               as="a"
-              href="/services"
+              href="/solutions/commercial"
             >
               Our Services
             </Button>
@@ -78,7 +69,7 @@ export default function HeroSection() {
               borderColor="whiteAlpha.400"
               _hover={{ bg: "whiteAlpha.200" }}
               as="a"
-              href="/projects"
+              href="/services/installation"
             >
               View Projects
             </Button>
@@ -162,6 +153,7 @@ export default function HeroSection() {
         py={4}
         gap={8}
         color="white"
+        zIndex={2}
       >
         <VStack spacing={1}>
           <Text fontWeight="bold" color="yellow.400">24/7</Text>
