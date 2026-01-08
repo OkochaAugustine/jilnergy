@@ -1,0 +1,25 @@
+{
+  "name": "jilnergy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node --max-old-space-size=8192 ./node_modules/next/dist/bin/next dev",
+    "build": "node --max-old-space-size=8192 ./node_modules/next/dist/bin/next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.1",
+    "@chakra-ui/theme-tools": "^2.2.6",
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "framer-motion": "^10.18.0",
+    "jsdom": "^27.4.0",
+    "next": "16.1.1",
+    "nodemailer": "^7.0.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "rss-parser": "^3.13.0"
+  }
+}
