@@ -1,18 +1,21 @@
 import "./globals.css";
 import Providers from "@/components/Providers";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloater from "@/components/WhatsAppFloater";
 
-/* ✅ Proper viewport control */
+/* ✅ Correct viewport export */
+export const viewport = {
+  width: "device-width",
+  initialScale: 0.95,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+/* Optional metadata (SEO only) */
 export const metadata = {
-  viewport: {
-    width: "device-width",
-    initialScale: 0.95, // visual zoom-out
-    maximumScale: 1,
-    userScalable: false,
-  },
+  title: "Jilnergy Solar",
+  description: "Clean energy solutions for homes and businesses",
 };
 
 export default function RootLayout({ children }) {
@@ -21,9 +24,7 @@ export default function RootLayout({ children }) {
       <body>
         <Providers>
           <Navbar />
-
           <main>{children}</main>
-
           <Footer />
           <WhatsAppFloater />
         </Providers>

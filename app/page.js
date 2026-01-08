@@ -1,5 +1,5 @@
-"use client";
 
+export const dynamic = "force-dynamic";
 import HeroSection from "@/sections/HeroSection";
 import KeyBenefits from "@/sections/KeyBenefits";
 // Updated: import the new cinematic FeaturedProjects section
